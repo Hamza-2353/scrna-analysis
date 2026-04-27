@@ -1,5 +1,8 @@
 # Single-Cell RNA-Seq Analysis Pipeline
 
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![Scanpy](https://img.shields.io/badge/Scanpy-Framework-brightgreen.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 This repository contains a comprehensive scRNA-seq analysis workflow, implemented in Python using the **Scanpy** framework. The pipeline follows standard bioinformatics best practices, from raw data preprocessing and quality control to cell clustering and marker gene identification.
 
 ## Project Description
