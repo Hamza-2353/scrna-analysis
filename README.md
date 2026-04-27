@@ -13,7 +13,7 @@ This project demonstrates the end-to-end analysis of single-cell RNA sequencing 
 
 ## Workflow
 The primary analysis is located in the `notebooks/` folder:
-* `notebooks/`: Contains the Jupyter notebooks for the analysis.
+* `notebooks/`: Contains the Jupyter notebooks for the step-by-step analysis.
 
 ## Prerequisites
 To run this analysis, you will need a Python environment with the following dependencies:
@@ -23,6 +23,17 @@ To run this analysis, you will need a Python environment with the following depe
 1. Clone this repository: `git clone https://github.com/Hamza-2353/scrna-analysis.git`
 2. Navigate to the `notebooks/` folder.
 3. Open the Jupyter notebook and execute the cells sequentially.
+
+## Analysis Results
+This analysis generated key visualizations that document the end-to-end processing of the scRNA-seq data:
+
+* **Quality Control:** Diagnostic plots (violin and scatter) to assess data quality and guide cell filtering based on gene counts and mitochondrial content.
+* **Dimensionality Reduction:** PCA variance ratio plots and UMAP visualizations to confirm data integration and identify cell clusters.
+* **Cell Type Annotation:** Clustering results (Leiden algorithm) and dot plots identifying characteristic marker genes (e.g., *CD3D*, *LYZ*, *HBA1*) for biological interpretation.
+
+Detailed figures are available in the [results/](results/) folder.
+
+
 
 ## Data Source
 The data used for this analysis was sourced from the [Scanpy Tutorials](https://github.com/scverse/scanpy-tutorials/).
