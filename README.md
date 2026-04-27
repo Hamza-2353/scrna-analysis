@@ -43,3 +43,10 @@ The data used for this analysis was sourced from the [Scanpy Tutorials](https://
 
 ## License
 This project is licensed under the MIT License.
+
+## Technical Summary
+* **Pipeline:** End-to-end scRNA-seq analysis using `scanpy`.
+* **Preprocessing:** Quality control based on `pct_counts_mt` (< 5%) and gene count filtering to remove low-quality cells and potential doublets.
+* **Dimensionality Reduction:** PCA for feature extraction, followed by UMAP for visualization.
+* **Clustering:** Leiden algorithm used at multiple resolutions; cluster resolution 0.50 was identified as optimal for defining distinct biological populations.
+* **Cell Annotation:** Manual annotation performed using canonical markers: *CD3D* (T-cells), *LYZ* (Monocytes), *HBA1/HBB* (Erythroblasts).
