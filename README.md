@@ -83,4 +83,4 @@ All tasks use the **PBMC 3K dataset** from 10X Genomics — a standard benchmark
 
 ## Author
 
-**Hamza** | Bioinformatics Assignment | 2026
+**Hamza Najeem**  | 2026
