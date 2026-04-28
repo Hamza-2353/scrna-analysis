@@ -33,11 +33,11 @@ This project emphasizes visual QC using specific plots generated during the pre-
 The following plots were generated during the pre-processing stage to ensure data quality:
 
 **Barcode Rank Plot**
-<img src="results/barcode_rank_plot.png" width="400">
+<img src="results/barcode_rank_plot.png" width="350">
 *Figure 1: Rank of barcodes by UMI counts used to identify the "knee" and "inflection" points.*
 
 **QC Scatter Plot**
-<img src="results/qc_scatter_plot.png" width="400">
+<img src="results/qc_scatter_plot.png" width="350">
 *Figure 2: Scatter plot of Total UMI count vs. -Log Probability to visualize technical noise and outliers.*
 
 ## How to Reproduce
