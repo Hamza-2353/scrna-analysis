@@ -6,24 +6,18 @@ End-to-end single-cell RNA-seq analysis workflow using **Scanpy**, covering clus
 
 ---
 
-## Analysis Results
-The following visualizations were generated during the workflow and are available in the `results/` folder:
+## Analysis Visualizations
 
-| File | Description |
+| Plot | Description |
 |---|---|
-| `cell_filtering.png` | Quality control metrics |
-| `cell_type_annotation.png` | Manual cell type labels |
-| `clustering.png` | Leiden clustering overview |
-| `clusters.png` | UMAP clusters |
-| `dimensionality_reduction.png` | PCA results |
-| `feature_selection.png` | Highly variable genes |
-| `filtering.png` | Pre-processing effects |
-| `marker_gene.png` | Differential expression analysis |
-| `markers.png` | Key marker genes |
-| `nearest_neighbour.png` | Neighborhood graph |
-| `plot.png` | Summary visualization |
-| `quality_control.png` | QC distributions |
-| `scatterplot_dimensionality.png` | Dimensionality reduction plot |
+| ![QC](results/quality_control.png) | Quality control distributions |
+| ![Filtering](results/filtering.png) | Pre-processing effects |
+| ![Selection](results/feature_selection.png) | Highly variable genes |
+| ![PCA](results/dimensionality_reduction.png) | PCA results |
+| ![Neighbors](results/nearest_neighbour.png) | Neighborhood graph |
+| ![Clusters](results/clusters.png) | UMAP Leiden clusters |
+| ![Markers](results/markers.png) | Key marker gene expression |
+| ![Annotation](results/cell_type_annotation.png) | Final cell type labels |
 
 ---
 
