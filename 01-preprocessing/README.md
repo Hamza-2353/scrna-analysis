@@ -27,6 +27,18 @@ This project emphasizes visual QC using specific plots generated during the pre-
 | **Barcode Rank Plot** (Elbow Plot) | A log-log plot ranking barcodes by UMI count (y-axis) vs. rank (x-axis). | Identifies the "knee" and "inflection" points used to distinguish actual cells from background noise (empty droplets). |
 | **QC Scatter Plot** | Scatter plot of Total UMI count (x-axis) vs. -Log Probability (y-axis). | visualizes technical noise and provides a view of how technical metrics relate across the cell population, assisting in identifying outliers. |
 
+## Results: Quality Control
+
+The following plots were generated during the pre-processing stage to ensure data quality:
+
+### Barcode Rank Plot
+![Barcode Rank Plot](01-preprocessing/results/barcode_rank_plot.png)
+*Figure 1: Rank of barcodes by UMI counts used to identify the "knee" and "inflection" points.*
+
+### QC Scatter Plot
+![QC Scatter Plot](01-preprocessing/results/qc_scatter_plot.png)
+*Figure 2: Scatter plot of Total UMI count vs. -Log Probability to visualize technical noise and outliers.*
+
 4.  **Matrix Refinement:** Filtering the raw matrix based on these QC thresholds to produce a high-quality dataset suitable for downstream biological interpretation.
 
 ## Tools & Resources
