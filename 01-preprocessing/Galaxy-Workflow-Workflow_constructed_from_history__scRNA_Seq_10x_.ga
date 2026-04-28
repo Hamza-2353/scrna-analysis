@@ -1,0 +1,518 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "comments": [],
+    "format-version": "0.1",
+    "name": "Workflow constructed from history 'scRNA Seq 10x'",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "L001_R1_001"
+                }
+            ],
+            "label": "L001_R1_001",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 10,
+                "top": 10
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "1d4eed10-efc0-4f50-8a4d-5d85ff2980a5",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "L001_R2_001"
+                }
+            ],
+            "label": "L001_R2_001",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 10,
+                "top": 130
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "bfdddcb6-0c4b-4b4d-bb60-956075933cf1",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 2,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "L002_R1_001."
+                }
+            ],
+            "label": "L002_R1_001.",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 10,
+                "top": 250
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "623c0016-a1c8-42ac-9ca9-a58d04d9437b",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 3,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "L002_R2_001"
+                }
+            ],
+            "label": "L002_R2_001",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 10,
+                "top": 370
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "ab129772-80f8-432d-a370-c8ff3f122d89",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "4": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 4,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Homo_sapiens.GRCh37.75"
+                }
+            ],
+            "label": "Homo_sapiens.GRCh37.75",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 10,
+                "top": 490
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "87240c17-dd88-4c39-9943-06bcec772cc2",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "5": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 5,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "3M-february-2018"
+                }
+            ],
+            "label": "3M-february-2018",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "left": 10,
+                "top": 610
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"tag\": null}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "7f9387a3-551d-436d-ba0a-474f06b8b4f8",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/2.7.11a+galaxy1",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "refGenomeSource|GTFconditional|sjdbGTFfile": {
+                    "id": 4,
+                    "output_name": "output"
+                },
+                "sc|input_types|input1": [
+                    {
+                        "id": 0,
+                        "output_name": "output"
+                    },
+                    {
+                        "id": 2,
+                        "output_name": "output"
+                    }
+                ],
+                "sc|input_types|input2": [
+                    {
+                        "id": 1,
+                        "output_name": "output"
+                    },
+                    {
+                        "id": 3,
+                        "output_name": "output"
+                    }
+                ],
+                "sc|soloCBwhitelist": {
+                    "id": 5,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "RNA STARSolo",
+            "outputs": [
+                {
+                    "name": "output_log",
+                    "type": "txt"
+                },
+                {
+                    "name": "output_genes",
+                    "type": "tsv"
+                },
+                {
+                    "name": "output_barcodes",
+                    "type": "tsv"
+                },
+                {
+                    "name": "output_matrix",
+                    "type": "mtx"
+                },
+                {
+                    "name": "output_BAM",
+                    "type": "bam"
+                },
+                {
+                    "name": "output_stats",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 230,
+                "top": 10
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/rna_starsolo/rna_starsolo/2.7.11a+galaxy1",
+            "tool_shed_repository": {
+                "changeset_revision": "381a32c51141",
+                "name": "rna_starsolo",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\", \"outWig\": {\"outWigType\": \"None\", \"__current_case__\": 0, \"outWigStrand\": \"false\"}, \"refGenomeSource\": {\"geneSource\": \"indexed\", \"__current_case__\": 0, \"GTFconditional\": {\"GTFselect\": \"without-gtf-with-gtf\", \"__current_case__\": 1, \"genomeDir\": \"hg19chrX\", \"sjdbGTFfile\": null, \"sjdbGTFfeatureExon\": \"exon\", \"sjdbOverhang\": \"100\"}}, \"sc\": {\"solo_type\": \"CB_UMI_Simple\", \"__current_case__\": 0, \"input_types\": {\"use\": \"repeat\", \"__current_case__\": 0, \"input1\": null, \"input2\": null}, \"soloCBwhitelist\": null, \"params\": {\"chemistry\": \"Cv3\", \"__current_case__\": 1}, \"soloBarcodeReadLength\": true, \"umidedup\": {\"soloUMIdedup\": \"1MM_CR\", \"__current_case__\": 4, \"soloUMIfiltering\": \"-\"}, \"soloCBmatchWLtype\": \"1MM_multi\"}, \"solo\": {\"soloStrand\": \"Forward\", \"soloFeatures\": \"Gene\", \"wasp_conditional\": {\"waspOutputMode\": \"\", \"__current_case__\": 1}, \"filter\": {\"filter_type\": \"no_filter\", \"__current_case__\": 3, \"output_raw\": \"true\"}, \"soloOutFormatFeaturesGeneField3\": \"Gene Expression\", \"outSAMattributes\": [\"NH\", \"HI\", \"AS\", \"nM\"], \"quantModeGene\": false, \"outSAMunmapped\": false, \"outSAMmapqUnique\": \"60\", \"junction_limits\": {\"limitOutSJoneRead\": \"1000\", \"limitOutSJcollapsed\": \"1000000\", \"limitSjdbInsertNsj\": \"1000000\"}}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "2.7.11a+galaxy1",
+            "type": "tool",
+            "uuid": "97c41b7e-84f3-4ff9-a8c0-49f241e85d49",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "7": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy0",
+            "errors": null,
+            "id": 7,
+            "input_connections": {
+                "results_0|software_cond|output_0|type|input": {
+                    "id": 6,
+                    "output_name": "output_log"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "MultiQC",
+            "outputs": [
+                {
+                    "name": "html_report",
+                    "type": "html"
+                },
+                {
+                    "name": "stats",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "left": 450,
+                "top": 10
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.27+galaxy0",
+            "tool_shed_repository": {
+                "changeset_revision": "a7e081ceb76a",
+                "name": "multiqc",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg19.len\", \"comment\": \"\", \"export\": false, \"flat\": false, \"results\": [{\"__index__\": 0, \"software_cond\": {\"software\": \"star\", \"__current_case__\": 28, \"output\": [{\"__index__\": 0, \"type\": {\"type\": \"log\", \"__current_case__\": 0, \"input\": null}}]}}], \"title\": \"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "1.27+galaxy0",
+            "type": "tool",
+            "uuid": "3b3a8a38-2824-483c-9144-0743307d80ad",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "8": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "errors": null,
+            "id": 8,
+            "input_connections": {
+                "tenx_format|input": {
+                    "id": 6,
+                    "output_name": "output_matrix"
+                },
+                "tenx_format|input_barcodes": {
+                    "id": 6,
+                    "output_name": "output_barcodes"
+                },
+                "tenx_format|input_genes": {
+                    "id": 6,
+                    "output_name": "output_genes"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "DropletUtils",
+            "outputs": [
+                {
+                    "name": "barcodes_out",
+                    "type": "tsv"
+                },
+                {
+                    "name": "genes_out",
+                    "type": "tsv"
+                },
+                {
+                    "name": "matrix_out",
+                    "type": "mtx"
+                }
+            ],
+            "position": {
+                "left": 450,
+                "top": 130
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "a9caad671439",
+                "name": "dropletutils",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"mtx\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg19.len\", \"operation\": {\"use\": \"filter\", \"__current_case__\": 0, \"method\": {\"use\": \"defaultdrops\", \"__current_case__\": 0, \"expected\": \"3000\", \"upperquant\": \"0.99\", \"lowerprop\": \"0.1\"}, \"outformat\": \"directory\"}, \"seed\": \"100\", \"tenx_format\": {\"use\": \"directory\", \"__current_case__\": 0, \"input\": null, \"input_genes\": null, \"input_barcodes\": null}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "1.10.0+galaxy2",
+            "type": "tool",
+            "uuid": "e9ae7b4f-e60b-48be-b49f-17d0219663f0",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "9": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "errors": null,
+            "id": 9,
+            "input_connections": {
+                "tenx_format|input": {
+                    "id": 6,
+                    "output_name": "output_matrix"
+                },
+                "tenx_format|input_barcodes": {
+                    "id": 6,
+                    "output_name": "output_barcodes"
+                },
+                "tenx_format|input_genes": {
+                    "id": 6,
+                    "output_name": "output_genes"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "DropletUtils",
+            "outputs": [
+                {
+                    "name": "plot",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "left": 450,
+                "top": 250
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "a9caad671439",
+                "name": "dropletutils",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"mtx\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg19.len\", \"operation\": {\"use\": \"barcode_rank\", \"__current_case__\": 1, \"lower\": \"100\"}, \"seed\": \"100\", \"tenx_format\": {\"use\": \"directory\", \"__current_case__\": 0, \"input\": null, \"input_genes\": null, \"input_barcodes\": null}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "1.10.0+galaxy2",
+            "type": "tool",
+            "uuid": "ff9ed6cf-b40b-4c8e-90c7-c88f1d3a6a09",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "10": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "errors": null,
+            "id": 10,
+            "input_connections": {
+                "tenx_format|input": {
+                    "id": 6,
+                    "output_name": "output_matrix"
+                },
+                "tenx_format|input_barcodes": {
+                    "id": 6,
+                    "output_name": "output_barcodes"
+                },
+                "tenx_format|input_genes": {
+                    "id": 6,
+                    "output_name": "output_genes"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "DropletUtils",
+            "outputs": [
+                {
+                    "name": "barcodes_out",
+                    "type": "tsv"
+                },
+                {
+                    "name": "genes_out",
+                    "type": "tsv"
+                },
+                {
+                    "name": "matrix_out",
+                    "type": "mtx"
+                },
+                {
+                    "name": "plot",
+                    "type": "png"
+                },
+                {
+                    "name": "table",
+                    "type": "tsv"
+                }
+            ],
+            "position": {
+                "left": 450,
+                "top": 370
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "a9caad671439",
+                "name": "dropletutils",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"mtx\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg19.len\", \"operation\": {\"use\": \"filter\", \"__current_case__\": 0, \"method\": {\"use\": \"emptydrops\", \"__current_case__\": 1, \"lower\": \"200\", \"fdr_thresh\": \"0.01\"}, \"outformat\": \"directory\"}, \"seed\": \"100\", \"tenx_format\": {\"use\": \"directory\", \"__current_case__\": 0, \"input\": null, \"input_genes\": null, \"input_barcodes\": null}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "1.10.0+galaxy2",
+            "type": "tool",
+            "uuid": "aea7168b-2313-4a63-8312-dac0cdc99f0c",
+            "when": null,
+            "workflow_outputs": []
+        },
+        "11": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "errors": null,
+            "id": 11,
+            "input_connections": {
+                "tenx_format|input": {
+                    "id": 6,
+                    "output_name": "output_matrix"
+                },
+                "tenx_format|input_barcodes": {
+                    "id": 6,
+                    "output_name": "output_barcodes"
+                },
+                "tenx_format|input_genes": {
+                    "id": 6,
+                    "output_name": "output_genes"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "DropletUtils",
+            "outputs": [
+                {
+                    "name": "plot",
+                    "type": "png"
+                }
+            ],
+            "position": {
+                "left": 450,
+                "top": 490
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/dropletutils/dropletutils/1.10.0+galaxy2",
+            "tool_shed_repository": {
+                "changeset_revision": "a9caad671439",
+                "name": "dropletutils",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__input_ext\": \"mtx\", \"chromInfo\": \"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg19.len\", \"operation\": {\"use\": \"barcode_rank\", \"__current_case__\": 1, \"lower\": \"100\"}, \"seed\": \"100\", \"tenx_format\": {\"use\": \"directory\", \"__current_case__\": 0, \"input\": null, \"input_genes\": null, \"input_barcodes\": null}, \"__page__\": 0, \"__rerun_remap_job_id__\": null}",
+            "tool_uuid": null,
+            "tool_version": "1.10.0+galaxy2",
+            "type": "tool",
+            "uuid": "bd1cdd14-6ef5-45c0-b03b-7f218a506da4",
+            "when": null,
+            "workflow_outputs": []
+        }
+    },
+    "tags": [],
+    "uuid": "57673aca-7570-401c-8493-6b47d5e86da5",
+    "version": 0
+}
