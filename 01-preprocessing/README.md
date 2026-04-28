@@ -32,13 +32,24 @@ This project emphasizes visual QC using specific plots generated during the pre-
 
 The following plots were generated during the pre-processing stage to ensure data quality:
 
-### Barcode Rank Plot
+**Barcode Rank Plot**
 <img src="results/barcode_rank_plot.png" width="400">
 *Figure 1: Rank of barcodes by UMI counts used to identify the "knee" and "inflection" points.*
 
-### QC Scatter Plot
+**QC Scatter Plot**
 <img src="results/qc_scatter_plot.png" width="400">
 *Figure 2: Scatter plot of Total UMI count vs. -Log Probability to visualize technical noise and outliers.*
+
+## How to Reproduce
+1.  Access the tutorial via the [Galaxy Training Network (GTN)](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html).
+2.  Use the provided sub-sampled FASTQ files from the tutorial's Zenodo link.
+3.  Ensure you are using **RNA STARsolo** (version 2.7.11a+galaxy1 or similar) with the **Chromium v3** chemistry settings as detailed in the pipeline workflow.
+
+## Next Steps
+This pre-processing module provides the high-quality count matrix required for downstream analysis. Future modules will cover:
+* **Dimensionality Reduction:** Normalization, variable gene selection, and PCA.
+* **Clustering & Annotation:** Leiden clustering and cell-type assignment.
+* **Differential Expression:** Identifying marker genes between defined cell populations.
 
 ## Tools & Resources
 * **Platform:** [UseGalaxy.org](https://usegalaxy.org/)
