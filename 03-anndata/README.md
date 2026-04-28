@@ -11,19 +11,15 @@ Exploration of the **AnnData** data structure, which is the core data format use
 ## What is AnnData?
 
 AnnData (Annotated Data) is an efficient, column-store data structure for storing single-cell data. It holds:
-
-```
 AnnData object
 ├── .X          → expression matrix (cells × genes)
 ├── .obs        → cell-level metadata (DataFrame)
 ├── .var        → gene-level metadata (DataFrame)
 ├── .obsm       → cell embeddings (PCA, UMAP, tSNE)
-├── .varm        → gene loadings (PCA components)
+├── .varm       → gene loadings (PCA components)
 ├── .obsp       → pairwise cell matrices (distances, graphs)
 ├── .uns        → unstructured metadata (any dict)
 └── .layers     → alternative expression matrices (raw, spliced, etc.)
-```
-
 ---
 
 ## What This Notebook Does
@@ -41,6 +37,19 @@ AnnData object
 
 ---
 
+## Output Files & Visualizations
+
+| File | Description |
+|---|---|
+| `my_anndata.h5ad` | Custom AnnData saved to disk |
+| `pbmc3k_anndata_demo.h5ad` | PBMC data with extra annotations |
+| `simulated_umap_embedding.png` | UMAP visualization of the simulated data |
+
+### UMAP Embedding
+![Simulated UMAP Embedding](results/simulated_umap_embedding.png)
+
+---
+
 ## How to Run
 
 ### Google Colab
@@ -50,19 +59,6 @@ Open `03_anndata_tutorial.ipynb` in Colab and run all cells.
 ```bash
 pip install anndata scanpy matplotlib pandas numpy
 jupyter notebook 03_anndata_tutorial.ipynb
-```
 
----
-
-## Output Files
-
-| File | Description |
-|---|---|
-| `my_anndata.h5ad` | Custom AnnData saved to disk |
-| `pbmc3k_anndata_demo.h5ad` | PBMC data with extra annotations |
-
----
-
-## References
-
-Virshup I, Rybakov S, Theis FJ, Angerer P, Wolf FA. anndata: Annotated data. *bioRxiv* (2021). https://doi.org/10.1101/2021.12.16.473007
+References
+Virshup I, Rybakov S, Theis FJ, Angerer P, Wolf FA. anndata: Annotated data. bioRxiv (2021). https://doi.org/10.1101/2021.12.16.473007
