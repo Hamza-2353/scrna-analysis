@@ -1,77 +1,30 @@
-# Task 1 — Pre-processing of 10X Single-Cell RNA Datasets
+# scRNA-seq Pre-processing: 10X Genomics Pipeline
 
-This notebook covers the complete pre-processing pipeline for raw 10X Genomics single-cell RNA-seq data, following the [Galaxy Project tutorial](https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html).
+This repository contains the documentation and workflow associated with the **"Pre-processing of 10X Single-Cell RNA Datasets"** tutorial from the Galaxy Training Network (GTN). 
 
----
+## Overview
+Single-cell RNA sequencing (scRNA-seq) provides high-throughput resolution for examining cell heterogeneity. This project focuses on the initial, crucial stage of the bioinformatics pipeline: transforming raw FASTQ sequencing data into a reliable, quality-controlled count matrix.
 
-## What This Notebook Does
+### Key Objectives
+* **Demultiplexing & Quantification:** Converting raw 10X Genomics FASTQ files into a gene-by-cell count matrix.
+* **Mapping:** Using **RNA STARsolo** for efficient, high-throughput alignment of reads to the reference genome (hg19/GRCh37).
+* **Quality Control (QC):** Identifying and filtering low-quality cells based on barcode rankings, mitochondrial content, and feature counts to ensure the integrity of downstream analysis.
 
-| Step | Description |
-|---|---|
-| 1. Load data | Read 10X Genomics matrix files into an AnnData object |
-| 2. QC metrics | Calculate % mitochondrial genes, total counts, n_genes per cell |
-| 3. QC plots | Violin plots and scatter plots for quality inspection |
-| 4. Filter cells | Remove low-quality cells and doublets |
-| 5. Filter genes | Remove genes detected in very few cells |
-| 6. Normalize | Normalize total counts per cell to 10,000 |
-| 7. Log-transform | Apply log1p transformation |
-| 8. HVGs | Identify highly variable genes |
-| 9. Scale | Scale data to unit variance |
-| 10. PCA | Run PCA for dimensionality reduction |
-| 11. Save | Save filtered AnnData to `.h5ad` file |
+## Pipeline Workflow
+The analysis follows these primary steps:
+1.  **Data Acquisition:** Importing sub-sampled PBMC (Peripheral Blood Mononuclear Cell) datasets and necessary annotations.
+2.  **Mapping (STARsolo):** Alignment of cDNA reads while utilizing a cell barcode "whitelist" to demultiplex samples.
+3.  **QC Assessment:** Investigating the STARsolo feature statistics to determine the number of detected cells and mapping quality.
+4.  **Matrix Refinement:** Filtering the raw matrix to produce a high-quality dataset suitable for downstream biological interpretation.
 
----
+## Tools & Resources
+* **Platform:** [UseGalaxy.org](https://usegalaxy.org/)
+* **Alignment Tool:** [RNA STARsolo](https://github.com/alexdobin/STAR)
+* **Supporting Framework:** [Galaxy Training Network (GTN)](https://training.galaxyproject.org/training-material/)
+* **Dataset:** 1k PBMCs from a Healthy Donor (10X Genomics, v3 Chemistry)
 
-## Dataset
-
-**PBMC 3K** — 3,000 Peripheral Blood Mononuclear Cells from 10X Genomics.
-
-```python
-# Loaded automatically in the notebook via:
-import scanpy as sc
-adata = sc.datasets.pbmc3k()
-```
+## References
+* **Melsted, P. et al. (2019).** Modular and efficient pre-processing of single-cell RNA-seq. [doi:10.1101/673285](https://doi.org/10.1101/673285)
+* **Tekman, M. et al. (2020).** A single-cell RNA-sequencing training and analysis suite using the Galaxy framework. *GigaScience*. [doi:10.1093/gigascience/giaa102](https://doi.org/10.1093/gigascience/giaa102)
 
 ---
-
-## How to Run
-
-### Google Colab (easiest)
-Click the badge at the top of the notebook and run all cells in order.
-
-### Local
-```bash
-pip install scanpy matplotlib seaborn
-jupyter notebook 01_preprocessing.ipynb
-```
-
----
-
-## Output Files
-
-| File | Description |
-|---|---|
-| `pbmc3k_preprocessed.h5ad` | Filtered, normalized AnnData object |
-| `qc_violin.png` | QC violin plot |
-| `qc_scatter.png` | Scatter plot of QC metrics |
-| `highly_variable_genes.png` | HVG plot |
-| `pca.png` | PCA variance ratio plot |
-
----
-
-## Key Parameters Used
-
-```python
-min_genes = 200        # minimum genes per cell
-min_cells = 3          # minimum cells per gene
-max_genes = 2500       # maximum genes per cell (doublet filter)
-max_pct_mito = 5       # maximum % mitochondrial reads
-n_top_genes = 2000     # number of highly variable genes
-```
-
----
-
-## Reference
-
-Galaxy Training Network. *Pre-processing of 10X Single-Cell RNA Datasets.*
-https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html
