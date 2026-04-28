@@ -10,12 +10,24 @@ Single-cell RNA sequencing (scRNA-seq) provides high-throughput resolution for e
 * **Mapping:** Using **RNA STARsolo** for efficient, high-throughput alignment of reads to the reference genome (hg19/GRCh37).
 * **Quality Control (QC):** Identifying and filtering low-quality cells based on barcode rankings, mitochondrial content, and feature counts to ensure the integrity of downstream analysis.
 
-## Pipeline Workflow
-The analysis follows these primary steps:
+## Pipeline Workflow & Data Visualization
+
+The analysis follows these primary steps, supported by specific visualizations for data inspection:
+
 1.  **Data Acquisition:** Importing sub-sampled PBMC (Peripheral Blood Mononuclear Cell) datasets and necessary annotations.
 2.  **Mapping (STARsolo):** Alignment of cDNA reads while utilizing a cell barcode "whitelist" to demultiplex samples.
-3.  **QC Assessment:** Investigating the STARsolo feature statistics to determine the number of detected cells and mapping quality.
-4.  **Matrix Refinement:** Filtering the raw matrix to produce a high-quality dataset suitable for downstream biological interpretation.
+3.  **QC Assessment:** Investigating the STARsolo feature statistics and the generated plots to determine the number of detected cells and mapping quality.
+
+### Data Visualizations
+
+This project emphasizes visual QC using specific plots generated during the pre-processing stage:
+
+| Plot Name | Visualization Description | Key Information Provided |
+| :--- | :--- | :--- |
+| **Barcode Rank Plot** (Elbow Plot) | A log-log plot ranking barcodes by UMI count (y-axis) vs. rank (x-axis). | Identifies the "knee" and "inflection" points used to distinguish actual cells from background noise (empty droplets). |
+| **QC Scatter Plot** | Scatter plot of Total UMI count (x-axis) vs. -Log Probability (y-axis). | visualizes technical noise and provides a view of how technical metrics relate across the cell population, assisting in identifying outliers. |
+
+4.  **Matrix Refinement:** Filtering the raw matrix based on these QC thresholds to produce a high-quality dataset suitable for downstream biological interpretation.
 
 ## Tools & Resources
 * **Platform:** [UseGalaxy.org](https://usegalaxy.org/)
