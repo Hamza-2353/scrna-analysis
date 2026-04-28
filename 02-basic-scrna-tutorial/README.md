@@ -6,30 +6,38 @@ End-to-end single-cell RNA-seq analysis workflow using **Scanpy**, covering clus
 
 ---
 
-## What This Notebook Does
+## Analysis Results
+The following visualizations were generated during the workflow and are available in the `results/` folder:
+
+| File | Description |
+|---|---|
+| `cell_filtering.png` | Quality control metrics |
+| `cell_type_annotation.png` | Manual cell type labels |
+| `clustering.png` | Leiden clustering overview |
+| `clusters.png` | UMAP clusters |
+| `dimensionality_reduction.png` | PCA results |
+| `feature_selection.png` | Highly variable genes |
+| `filtering.png` | Pre-processing effects |
+| `marker_gene.png` | Differential expression analysis |
+| `markers.png` | Key marker genes |
+| `nearest_neighbour.png` | Neighborhood graph |
+| `plot.png` | Summary visualization |
+| `quality_control.png` | QC distributions |
+| `scatterplot_dimensionality.png` | Dimensionality reduction plot |
+
+---
+
+## Workflow Summary
 
 | Step | Description |
 |---|---|
-| 1. Load data | Load the pre-processed PBMC 3K AnnData from Task 1 |
+| 1. Load data | Load the pre-processed PBMC 3K AnnData |
 | 2. Neighborhood graph | Compute k-nearest neighbors graph |
 | 3. UMAP | Compute UMAP 2D embedding |
 | 4. Clustering | Leiden community detection algorithm |
 | 5. Marker genes | Find differentially expressed genes per cluster |
 | 6. Visualization | Dot plots, violin plots, UMAP colored by cluster & gene |
-| 7. Cell type annotation | Manually annotate clusters using known marker genes |
-
----
-
-## Outputs & Plots Generated
-
-| File | Description |
-|---|---|
-| `umap_clusters.png` | UMAP colored by Leiden cluster |
-| `umap_markers.png` | UMAP colored by key marker genes |
-| `dotplot_markers.png` | Dot plot of marker gene expression per cluster |
-| `violin_markers.png` | Violin plot of top marker genes |
-| `rank_genes_groups.png` | Top differentially expressed genes per cluster |
-| `pbmc3k_clustered.h5ad` | Final annotated AnnData object |
+| 7. Cell type annotation | Manual annotation using known markers |
 
 ---
 
@@ -51,16 +59,8 @@ End-to-end single-cell RNA-seq analysis workflow using **Scanpy**, covering clus
 
 ### Google Colab
 Open `02_basic_scrna_tutorial.ipynb` in Colab and run all cells.
-> Make sure `pbmc3k_preprocessed.h5ad` from Task 1 is available, or the notebook will regenerate it automatically.
 
 ### Local
 ```bash
 pip install scanpy leidenalg matplotlib seaborn
 jupyter notebook 02_basic_scrna_tutorial.ipynb
-```
-
----
-
-## Reference
-
-Wolf, F.A., Angerer, P. & Theis, F.J. SCANPY: large-scale single-cell gene expression data analysis. *Genome Biology* 19, 15 (2018). https://doi.org/10.1186/s13059-017-1382-0
